@@ -1,4 +1,12 @@
 node_modules
 # Keep environment variables out of version control
 .env
+
+secret.yaml
+
+#Terraform
 terraform.tfvars
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup

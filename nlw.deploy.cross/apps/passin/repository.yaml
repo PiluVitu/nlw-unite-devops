@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Secret
+
+metadata:
+  name: private-repo
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+
+stringData:
+  type: git
+  url: git@github.com:PiluVitu/nlw-unite-devops.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+    QyNTUxOQAAACDVr1E2TK4UynLvtR1+GKHXnTjYJUZ1eYaoW7EDuuQdJwAAAIjpUyrD6VMq
+    wwAAAAtzc2gtZWQyNTUxOQAAACDVr1E2TK4UynLvtR1+GKHXnTjYJUZ1eYaoW7EDuuQdJw
+    AAAECaKXqtQvcF6OACd8sOfYg3rZOotZIGMd6x/EcAJPStitWvUTZMrhTKcu+1HX4Yoded
+    ONglRnV5hqhbsQO65B0nAAAAAAECAwQF
+    -----END OPENSSH PRIVATE KEY-----
