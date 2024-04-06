@@ -15,7 +15,6 @@ FROM base AS build
 WORKDIR /usr/src/app
 
 COPY . .
-COPY .env .env
 COPY --from=dependecies /usr/src/app/node_modules ./node_modules
 
 RUN pnpm build
