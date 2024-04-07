@@ -5,13 +5,13 @@ image:
   tag: 10273d8
   port: 3333
 imagePullSecrets: []
-nameOverride: ''
-fullnameOverride: ''
+nameOverride: ""
+fullnameOverride: ""
 serviceAccount:
   create: true
   automount: true
   annotations: {}
-  name: ''
+  name: ""
 podAnnotations: {}
 podLabels: {}
 podSecurityContext: {}
@@ -21,7 +21,7 @@ service:
   port: 80
 ingress:
   enabled: false
-  className: ''
+  className: ""
   annotations: {}
   hosts:
     - host: chart-example.local
@@ -29,6 +29,27 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
   tls: []
+startupProbe:
+  httpGet:
+    path: /health
+    pathType: http
+  initalDelaySeconds: 40
+  failureThreshold: 5
+  periodSeconds: 10
+livenessProbe:
+  httpGet:
+    path: /health
+    pathType: http
+  initalDelaySeconds: 60
+  failureThreshold: 5
+  periodSeconds: 10
+readinessProbe:
+  httpGet:
+    path: /health
+    pathType: http
+  initalDelaySeconds: 60
+  failureThreshold: 5
+  periodSeconds: 10
 resources:
   requests:
     cpu: 200m
