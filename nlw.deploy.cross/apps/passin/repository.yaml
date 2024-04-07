@@ -9,7 +9,8 @@ metadata:
 
 stringData:
   type: git
-  url: https://github.com/PiluVitu/nlw-unite-devops.git
+  url: git@github.com:PiluVitu/nlw-unite-devops.git
   sshPrivateKey: |
     -----BEGIN OPENSSH PRIVATE KEY-----
+    ...
     -----END OPENSSH PRIVATE KEY-----
