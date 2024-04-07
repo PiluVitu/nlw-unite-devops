@@ -2,7 +2,7 @@ replicaCount: 5
 image:
   repository: piluvitu/nlw.services.passin
   pullPolicy: Always
-  tag: 3c6893d
+  tag: 27716ca
   port: 3333
 imagePullSecrets: []
 nameOverride: ''
